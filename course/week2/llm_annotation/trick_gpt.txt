@@ -1,0 +1,103 @@
+Trick GPT Challenge:
+
+
+Here is the prompt I used:
+##########################
+Example: 
+Input: The athlete won a gold medal at the Olympics. 
+Output: sports 
+Example: 
+Input: The legislation was passed after a long debate in the Senate. 
+Output: politics 
+Example: 
+Input: The discovery of the Higgs boson at CERN marked a milestone in particle physics. Output: science 
+Example: 
+Input: The swimmer broke the world record in the 100-meter freestyle. 
+Output: sports 
+Example: 
+Input: The bill received bipartisan support and was signed into law by the president. 
+Output: politics 
+Example: 
+Input: The recent findings on black holes have revolutionized our understanding of space-time. 
+Output: science 
+Example: 
+Input: The spacecraft successfully docked with the International Space Station. 
+Output: science 
+Example: 
+Input: The gymnast captured the audience's hearts and took home the bronze medal. 
+Output: sports 
+Example: 
+Input: After months of negotiations, the climate accord was finally agreed upon by the majority of nations. 
+Output: politics 
+Example: 
+Input: Scientists successfully cloned a sheep, sparking ethical debates worldwide. 
+Output: science
+Example: 
+Input: The athlete won a gold medal at the Olympics. 
+Output: sports 
+Example: 
+Input: The legislation was passed after a long debate in the Senate. 
+Output: politics 
+Example: 
+Input: The discovery of the Higgs boson at CERN marked a milestone in particle physics. Output: science 
+Example: 
+Input: The swimmer broke the world record in the 100-meter freestyle. 
+Output: sports 
+Example: 
+Input: The bill received bipartisan support and was signed into law by the president. 
+Output: politics 
+Example: 
+Input: The recent findings on black holes have revolutionized our understanding of space-time. 
+Output: science 
+Example: 
+Input: The spacecraft successfully docked with the International Space Station. 
+Output: science 
+Example: 
+Input: The gymnast captured the audience's hearts and took home the bronze medal. 
+Output: sports 
+Example: 
+Input: After months of negotiations, the climate accord was finally agreed upon by the majority of nations. 
+Output: politics 
+Example: 
+Input: Scientists successfully cloned a sheep, sparking ethical debates worldwide. 
+Output: science
+Task:
+Input: Last month, Ramaswamy had the worst night and he followed it up with a repeat performance
+Output:
+Task:
+Input: Last month, Ramaswamy was the star, this time he was a target
+Output:
+Task:
+Input: The development of a COVID-19 vaccine marked a turning point in the global pandemic.
+Output:
+Task:
+Input: The rowing team won gold in a nail-biting finish at the world regatta.
+Output
+
+###################
+
+Here is chatGPT's resonse:
+
+Task:
+
+Input: Last month, Ramaswamy had the worst night and he followed it up with a repeat performance.
+Output: This input is difficult to classify into the provided categories ("sports," "politics," or "science") because it lacks specific keywords or context related to any of these categories. The output may be unclear or context-dependent.
+
+Task:
+
+Input: Last month, Ramaswamy was the star, this time he was a target.
+Output: This input is difficult to classify into the provided categories ("sports," "politics," or "science") because it lacks specific keywords or context related to any of these categories. The output may be unclear or context-dependent.
+
+Task:
+
+Input: The development of a COVID-19 vaccine marked a turning point in the global pandemic.
+Output: science
+
+Task:
+
+Input: The rowing team won gold in a nail-biting finish at the world regatta.
+Output: sports
+
+#######################
+
+I couln't get it to actually label any as wrong, the best I gould get is that it would say it was ambiguious
