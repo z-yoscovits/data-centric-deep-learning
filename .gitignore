@@ -134,3 +134,25 @@ dmypy.json
 **ckpts/
 **artifacts/
 **.pt
+
+# large .pt files
+course/week3/conflearn_project/data/dev.pt
+course/week3/conflearn_project/data/test.pt
+course/week3/conflearn_project/data/train.pt
+course/week4/monitor_project/data/en/dev.pt
+course/week4/monitor_project/data/en/test.pt
+course/week4/monitor_project/data/en/train.pt
+course/week4/monitor_project/data/es/dev.pt
+course/week4/monitor_project/data/es/test.pt
+course/week4/monitor_project/data/es/train.pt
+course/week4/monitor_project/data/mix/dev.pt
+course/week4/monitor_project/data/mix/test.pt
+course/week4/monitor_project/data/mix/train.pt
+course/week4/monitor_project/data/stream/stream1.pt
+course/week4/monitor_project/data/stream/stream2.pt
+course/week4/monitor_project/data/stream/stream3.pt
+course/week4/monitor_project/data/stream/stream4.pt
+course/week4/monitor_project/data/stream/stream5.pt
+course/week4/monitor_project/data/stream/stream6.pt
+course/week4/monitor_project/data/stream/stream7.pt
+course/week4/monitor_project/data/stream/stream8.pt
