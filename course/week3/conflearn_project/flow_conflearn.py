@@ -132,7 +132,30 @@ class TrainIdentifyReview(FlowSpec):
     kf = KFold(n_splits=3)    # create kfold splits
 
     for train_index, test_index in kf.split(X):
-      probs_ = None
+      X_train = torch.from_numpy(X[train_index]).float()
+      y_train = torch.from_numpy(y[train_index]).long()
+      X_test = torch.from_numpy(X[test_index]).float()
+      y_test = torch.from_numpy(y[test_index]).long()
+      train_dataset = TensorDataset(X_train, y_train)
+      test_dataset = TensorDataset(X_test, y_test)
+      train_dataloader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+      test_dataloader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+      
+      system = SentimentClassifierSystem(self.config)
+
+      trainer = Trainer(max_epochs=10)
+      
+      trainer.fit(system, train_dataloader)
+      
+      probs_ = trainer.predict(model= system, dataloaders=test_dataloader, return_predictions =True)
+      probs_ = torch.cat(probs_).squeeze().cpu().numpy()
+
+     
+      
+      
+
+
+      
       # ===============================================
       # FILL ME OUT
       # 
@@ -196,7 +219,7 @@ class TrainIdentifyReview(FlowSpec):
     prob = np.stack([1 - prob, prob]).T
   
     # rank label indices by issues
-    ranked_label_issues = None
+    ranked_label_issues = find_label_issues(self.all_df.label, prob, return_indices_ranked_by='self_confidence')
     
     # =============================
     # FILL ME OUT
@@ -308,7 +331,9 @@ class TrainIdentifyReview(FlowSpec):
     # dm.dev_dataset.data = dev slice of self.all_df
     # dm.test_dataset.data = test slice of self.all_df
     # # ====================================
-
+    dm.train_dataset.data=self.all_df[:len(dm.train_dataset)]
+    dm.dev_dataset.data=self.all_df[len(dm.train_dataset):len(dm.train_dataset) + len(dm.dev_dataset)]
+    dm.test_dataset.data=self.all_df[len(dm.train_dataset) + len(dm.dev_dataset):]
     # start from scratch
     system = SentimentClassifierSystem(self.config)
     trainer = Trainer(
